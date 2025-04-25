@@ -21,8 +21,8 @@ These interfaces are ideal for **compact, responsive handlebar-mounted controls*
 ![Open Virtual Steering Diagram](/media/OpenVirtualSteering_Overview.png)
 
 ## 📚 Other OVS Repositories in this Project
-- [`BLE-Steering-Server`](https://github.com/Berg0162/Bluefruit-Steering-Server) - Critical Shared Backend (Arduino library)
-- [`OpenVirtualSteering-MotionIMU`](https://github.com/Berg0162/Open-Virtual-Steering-MotionIMU-Bluefruit) – Using IMUs like the MPU6050  
+- [`Bluefruit-Steering-Server`](https://github.com/Berg0162/Bluefruit-Steering-Server) - Critical Shared Backend (Arduino library)
+- [`Open-Virtual-Steering-MotionIMU-Bluefruit`](https://github.com/Berg0162/Open-Virtual-Steering-MotionIMU-Bluefruit) – Using IMUs like the MPU6050  
 
 ### 🧭 How It Works
 
