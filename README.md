@@ -34,7 +34,7 @@ This firmware acts as a **Bluefruit Steering Controller**, combining two core co
 2. 🎮 **Discrete HID Handler**  
    This repository provides input from **simple human interface devices**, including buttons, joysticks, and rotary encoders. These inputs are sampled and converted into discrete steering-angle values.
 
-In the handler, the selected HID device is read, interpreted as a left/right/center signal or analog deflection, and in the main program loop steering-angle values are passed to `BLESteeringServer::updateSteeringValue()` for BLE transmission to a connected client (e.g., a virtual cycling platform).
+In the handler, the selected HID device is read, interpreted as a left/right/center signal or analog deflection, and in the main program loop steering-angle values are passed to `BluefruitSteeringServer::updateSteeringValue()` for BLE transmission to a connected client (e.g., a virtual cycling platform).
 
 The code structure allows:
 - Easy switching between input devices
@@ -42,13 +42,19 @@ The code structure allows:
 
 ## 🧱 Dependencies
 
-+ [Arduino core for ESP32](https://github.com/espressif/arduino-esp32)
-+ [NimBLE-Arduino version 2.x](https://github.com/h2zero/NimBLE-Arduino)
-+ [BLESteeringServer](https://github.com/Berg0162/BLE-Steering-Server)
-+ HID dependent library
-+ **Supported MCU's** with **NimBLE-Arduino**
-    - Espressif: ESP32, ESP32C3, ESP32S3
-    - Nordic: nRF51, nRF52 series (**Requires** using [n-able arduino core](https://github.com/h2zero/n-able-Arduino))
++ [Adafruit nRF52 Arduino Core](https://github.com/adafruit/Adafruit_nRF52_Arduino)
++ [Adafruit Bluefruit Library (Source)](https://github.com/adafruit/Adafruit_nRF52_Arduino/tree/master/libraries/Bluefruit52Lib)
++ [BluefruitSteeringServer](https://github.com/Berg0162/Bluefruit-Steering-Server)
+> 💡 This library is built specifically for **Adafruit's Bluefruit platform**, and is not compatible with NimBLE-based ESP32 boards.
+
+### **Supported MCU Boards**
++ Nordic Semiconductor **nRF52 series**
+  - 🟢 Adafruit Feather nRF52840 Express
+  - 🟢 Adafruit ItsyBitsy nRF52840
+  - 🟢 Adafruit CLUE, Bluefruit Sense, and other nRF52 boards with BLE support
+
+To install the core:
+- Follow Adafruit's guide: [Install Adafruit nRF52 Arduino Core](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/arduino-bsp-setup)
 
 ## 🧪 Testing & Validation
 
@@ -165,23 +171,6 @@ One can use the light library version (nRF52) for the EC11 and the following wir
 ```
 
 Notice: the pullup resistors are critical for a reliable operation!!<br>
-
-Another choice is the ESP32 encoder library:<br>
-
-```C++
-#include <ESP32Encoder.h>
-/* ------------------------------------------------------------------------
-    ESP32Encoder library uses the ESP32 pulse counter hardware peripheral
-    --> ESP32, ESP32S3 and ESP32c2 are supported.
-    --> ESP32c3 does not have pulse counter hardware.
-  -------------------------------------------------------------------------*/
-
-#define ENC_PINA_CLK A2 // CLK ENCODER -> Connect PinA with a 10K Ohm Pullup resistor to Vcc 3 Volt
-#define ENC_PINB_DT  A3 // DT  ENCODER -> Connect PinB with a 10K Ohm Pullup resistor to Vcc 3 Volt
-// --> Connect ENCODER PinC to GND
-// --> Connect ENCODER PinD with a 10K Ohm Pullup resistor to Vcc 3 Volt
-#define ENC_PINE_SW  A4 // SW ENCODER Switch PinE
-```
 
 ---
 
