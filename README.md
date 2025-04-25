@@ -1,4 +1,4 @@
-# Open Virtual Steering with DiscreteHIDs
+# Open Virtual Steering with DiscreteHIDs & Bluefruit
 
 The **Romans** knew it already: **`"Sterzare Necesse Est"`** (free after Plutarch), and it still holds true in the world of **virtual cycling**.
 
@@ -21,15 +21,14 @@ These interfaces are ideal for **compact, responsive handlebar-mounted controls*
 ![Open Virtual Steering Diagram](/media/OpenVirtualSteering_Overview.png)
 
 ## 📚 Other OVS Repositories in this Project
-- [`BLE-Steering-Server`](https://github.com/Berg0162/BLE-Steering-Server) - Critical Shared Backend (Arduino library)
-- [`OpenVirtualSteering-MotionIMU`](https://github.com/Berg0162/OpenVirtualSteering-MotionIMU) – Using IMUs like the MPU6050  
-- [`OpenVirtualSteering-VoiceControl`](https://github.com/Berg0162/OpenVirtualSteering-VoiceControl) – ML-powered voice input using MEMS microphones
+- [`BLE-Steering-Server`](https://github.com/Berg0162/Bluefruit-Steering-Server) - Critical Shared Backend (Arduino library)
+- [`OpenVirtualSteering-MotionIMU`](https://github.com/Berg0162/Open-Virtual-Steering-MotionIMU-Bluefruit) – Using IMUs like the MPU6050  
 
 ### 🧭 How It Works
 
-This firmware acts as a **BLE Steering Controller**, combining two core components:
+This firmware acts as a **Bluefruit Steering Controller**, combining two core components:
 
-1. 🧱 **BLESteeringServer**  
+1. 🧱 **BluefruitSteeringServer**  
    A standalone library that manages Bluetooth Low Energy (BLE) communication, including advertisement, pairing, and steering data transmission using a standardized steering profile.
 
 2. 🎮 **Discrete HID Handler**  
@@ -88,7 +87,6 @@ See main code snippet:
 // -----------------------------------------------------------------------------------
 //#include "twoButtons.h"
 #include "twoButtonsPlus.h"
-//#include "rotaryESP32Encoder.h"
 //#include "rotaryEncoder.h"
 //#include "ps2JoyStick.h"
 // -----------------------------------------------------------------------------------
@@ -129,14 +127,6 @@ Connect a button at one side to the GPIO pin of your choice <b>and</b> to ground
 Generations grew up with game controllers that have buttons and a Joy Stick. Many consider this an ideal HID, so it it can't be missing from the list! Mounting it on the handlebar can be a point of concern.<br>
 Connect the PS2 Joy Stick pins to the different developement boards as as is detailed below:<br>
 <br clear="left">
-- ESP32
-```C++
-// ESP32 Feather V2 pin numbers
-#define PS2_PIN_VRX  A0 // analog pin connected to VRX output
-#define PS2_PIN_VRY  A1 // analog pin connected to VRY output
-#define PS2_PIN_SW   A2 // digital pin connected to SW-switch output
-// PS2_PIN_GND to ESP32 pin GND and PS2_PIN_5Volt to ESP32 pin Vcc 3Volt !!
-```
 - nRF52840/nRF52832
 ```C++
 /* ------------------------------------------------------------------------------------------------
