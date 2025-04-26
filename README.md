@@ -167,7 +167,7 @@ Connect the PS2 Joy Stick pins to the different developement boards as as is det
 
 <img src="./media/rotary-encoder-ec11-20mm-rings (1)-600x600h.jpg" width="200" height="200" align="left" alt="Rotary Encoder"><br>
 
-One can use the light library version (nRF52) for the EC11 and the following wiring: <br>
+We apply the included EC11 class and the following wiring: <br>
 <br clear="left">
 
 ```C++
