@@ -80,6 +80,16 @@ This repository does <b>not include or promote any circumvention of technologica
 If you are a <b>rights holder</b> and believe this project includes content that <b>violates your intellectual property rights</b>, please <b>open an issue</b> in this repository. We are committed to responding promptly and respectfully to legitimate concerns.
 </details>
 
+## 🚀 Quick Start
+
+1. Download or clone this repository.
+2. Unzip (if needed) and move the folder into your Arduino Sketchbook:
+3. Open the `.ino` file manually in Arduino IDE.
+4. Ensure required libraries are installed (see Dependencies).
+5. Compile and upload to your board.
+
+> ℹ️ The sketch file name may differ from the repository name. This is intentional for better versioning and description.
+
 # 🧩 Included HID Input Methods
 
 To select one of the discrete Human-Interface-Devices that was explored: 
