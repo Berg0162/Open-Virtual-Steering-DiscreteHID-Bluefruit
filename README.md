@@ -173,11 +173,23 @@ We apply the included EC11 class and the following wiring: <br>
 ```C++
 #include "EC11.hpp"
 
+/* ------------------------------------------------------------------------------------------------
+ * Warning I/O Pins have identical position but different naming depending on the processor board
+ * I/O Pin declarations for connection to Rotary Encoder */
+#if defined(ARDUINO_NRF52840_FEATHER) 
 #define ENC_PINA_CLK A2 // CLK ENCODER -> Connect PinA with a 10K Ohm Pullup resistor to Vcc 3 Volt
 #define ENC_PINB_DT  A3 // DT  ENCODER -> Connect PinB with a 10K Ohm Pullup resistor to Vcc 3 Volt
 // --> Connect ENCODER PinC to GND
 // --> Connect ENCODER PinD with a 10K Ohm Pullup resistor to Vcc 3 Volt
 #define ENC_PINE_SW  A4 // SW ENCODER Switch PinE
+#endif
+#if defined(ARDUINO_NRF52832_FEATHER)
+#define ENC_PINA_CLK 4 // CLK ENCODER -> Connect PinA with a 10K Ohm Pullup resistor to Vcc 3 Volt
+#define ENC_PINB_DT  5 // DT  ENCODER -> Connect PinB with a 10K Ohm Pullup resistor to Vcc 3 Volt
+// --> Connect ENCODER PinC to GND
+// --> Connect ENCODER PinD with a 10K Ohm Pullup resistor to Vcc 3 Volt
+#define ENC_PINE_SW  6 // SW ENCODER Switch PinE
+#endif
 ```
 
 Notice: the pullup resistors are critical for a reliable operation!!<br>
