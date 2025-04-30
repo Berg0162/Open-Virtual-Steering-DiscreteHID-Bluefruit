@@ -45,6 +45,9 @@ The code structure allows:
 + [Adafruit nRF52 Arduino Core](https://github.com/adafruit/Adafruit_nRF52_Arduino)
 + [Adafruit Bluefruit Library (Source)](https://github.com/adafruit/Adafruit_nRF52_Arduino/tree/master/libraries/Bluefruit52Lib)
 + [BluefruitSteeringServer](https://github.com/Berg0162/Bluefruit-Steering-Server)
++ HID dependent library
+  - [OneButton](https://docs.arduino.cc/libraries/onebutton)
+
 > 💡 This library is built specifically for **Adafruit's Bluefruit platform**, and is not compatible with NimBLE-based ESP32 boards.
 
 ### **Supported MCU Boards**
