@@ -21,6 +21,7 @@
 
 // Definition of some PS2 Joy Stick parameters
 #define MAX_ADC_RESOLUTION 4095 // Feather ADC is set to 12 bit resolution
+#define MAX_STEER_ANGLE 35 // Steering Angle shoud not exceed this value
 // Joystick Calibration -> ZEROPOSDEVIATION is equal to the calculated steer angle 
 // when the Joystick is in the neutral position (--> no steering)
 #define ZEROPOSDEVIATION 4  // Dependent of the mechanics of your device
