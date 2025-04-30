@@ -1,4 +1,4 @@
-# Open Virtual Steering with DiscreteHIDs & Bluefruit
+# <img src="/media/Nordic_Icon.png" width="53" height="50" align="bottom" alt="Nordic Icon"> Open Virtual Steering with DiscreteHIDs & Bluefruit
 
 The **Romans** knew it already: **`"Sterzare Necesse Est"`** (free after Plutarch), and it still holds true in the world of **virtual cycling**.
 
