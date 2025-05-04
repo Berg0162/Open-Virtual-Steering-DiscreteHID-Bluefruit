@@ -34,7 +34,7 @@ This firmware acts as a **Bluefruit Steering Controller**, combining two core co
 2. 🎮 **Discrete HID Handler**  
    This repository provides input from **simple human interface devices**, including buttons, joysticks, and rotary encoders. These inputs are sampled and converted into discrete steering-angle values.
 
-In the handler, the selected HID device is read, interpreted as a left/right/center signal or analog deflection, and in the main program loop steering-angle values are passed to `BluefruitSteeringServer::updateSteeringValue()` for BLE transmission to a connected client (e.g., a virtual cycling platform).
+In the handler, the selected HID device is read, interpreted as a left/right/center signal or analog deflection, and in the main program loop steering-angle values are passed to `BluefruitSteeringServer::updateSteeringValue()` for transmission to a BLE-connected client.
 
 The code structure allows:
 - Easy switching between input devices
