@@ -5,7 +5,12 @@ The **Romans** knew it already: **`"Sterzare Necesse Est"`** (free after Plutarc
 <details>
 <summary>What it means</summary>
   
-The original quote **Navigare Necesse Est** ("Navigation is Necessary") was humorously adapted here by replacing _Navigare_ with the Italian verb for [**Steering**](https://en.wiktionary.org/wiki/sterzare), aligning it with the project's theme.
+The phrase is a playful remix of the Latin saying **"Navigare Necesse Est"** ("To sail is necessary"). Replacing _Navigare_ with [**Sterzare**](https://en.wiktionary.org/wiki/sterzare) — the Italian verb for _steering_ — reflects the project’s goal: enhancing interaction through alternative Human Interface Devices (HIDs).<br>
+
++ More autonomy: increased user-experience
+  + Ride the optimal line through a corner
+  + Turn left or right at intersections
+  + Tactical positioning in a group
 </details>
 
 This repo is part of the **Open Virtual Steering (OVS)** initiative, an open-source exploration of alternative **Human Interface Devices (HIDs)** for **virtual steering** in indoor cycling platforms. This specific repository demonstrates **discrete-style HIDs** like:
